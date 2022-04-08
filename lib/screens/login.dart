@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:simple_market/widgets/input.dart';
 import 'package:simple_market/constants/textConstants.dart';
 
@@ -21,6 +23,7 @@ class _Login extends State<Login> {
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                SvgPicture.asset("images/logo.svg"),
                 InputField(
                   label: "Email:",
                   onChanged: (value)=>{
