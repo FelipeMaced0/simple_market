@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_market/widgets/input.dart';
-
+import 'package:simple_market/constants/textConstants.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -26,12 +26,14 @@ class _Login extends State<Login> {
                   onChanged: (value)=>{
                     _email = value
                   },
+                  textStyle: defaultTextStyle,
                 ),
                 InputField(
                   label: "Password:",
                   onChanged: (value)=>{
                     _password = value
                   },
+                  textStyle: defaultTextStyle,
                 ),
                
               ]),

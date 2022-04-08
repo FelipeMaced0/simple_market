@@ -58,7 +58,7 @@ flutter:
   uses-material-design: true
 
   fonts:
-    - family: Fredoka
+    - family: FredokaOne
       fonts:
         - asset: fonts/FredokaOne-Regular.ttf
         
