@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_market/widgets/input.dart';
 import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/widgets/logo.dart';
-
+import 'package:simple_market/widgets/circular_image.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -32,19 +32,17 @@ class _Login extends State<Login> {
                   ),
                   InputField(
                     label: "Email:",
-                    onChanged: (value)=>{
-                      _email = value
-                    },
+                    onChanged: (value) => {_email = value},
                     textStyle: defaultTextStyle,
                   ),
                   InputField(
                     label: "Password:",
-                    onChanged: (value)=>{
-                      _password = value
-                    },
+                    onChanged: (value) => {_password = value},
                     textStyle: defaultTextStyle,
                   ),
-                 
+                  const CircularImage(
+                    name: "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
+                  )
                 ]),
           ),
         ));
