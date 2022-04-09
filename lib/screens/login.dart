@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:simple_market/widgets/input.dart';
 import 'package:simple_market/constants/textConstants.dart';
+import 'package:simple_market/widgets/logo.dart';
+
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -25,8 +27,9 @@ class _Login extends State<Login> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SvgPicture.asset(
-                    "images/logo.svg",
+                  const Logo(
+                    assetName: "images/logo.svg",
+                    imageColor: Color(0xFFFFFFFF),
                   ),
                   InputField(
                     label: "Email:",
