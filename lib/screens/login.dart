@@ -40,8 +40,57 @@ class _Login extends State<Login> {
                     onChanged: (value) => {_password = value},
                     textStyle: defaultTextStyle,
                   ),
-                  const CircularImage(
-                    name: "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
+                  ElevatedButton(
+                    onPressed: () => {
+
+                    },
+                    child: const Text("Entrar")
+                  ),
+                  Expanded(
+                    child: Column(children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(15, 15, 30, 0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: const [
+                            CircularImage(
+                              name:
+                                  "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
+                              color: Color(0xFFFF9675),
+                              xAxis: 170.0,
+                              yAxis: 170.0,
+                              margin: EdgeInsets.all(20),
+                              padding: EdgeInsets.symmetric(vertical: 30),
+                              
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(30, 5, 15, 15),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: const [
+                            
+                            CircularImage(
+                              name:
+                                  "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
+                              color: Color(0xFFFF9675),
+                              xAxis: 90.0,
+                              yAxis: 90.0,
+                              margin: EdgeInsets.only(right: 30),
+                            ),
+                            CircularImage(
+                              name:
+                                  "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
+                              color: Color(0xFFFF9675),
+                              xAxis: 40.0,
+                              yAxis: 40.0,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ]),
                   )
                 ]),
           ),
