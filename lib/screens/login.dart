@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:simple_market/widgets/input.dart';
-import 'package:simple_market/constants/textConstants.dart';
+import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/widgets/logo.dart';
 
 
