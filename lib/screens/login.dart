@@ -20,26 +20,31 @@ class _Login extends State<Login> {
     return Scaffold(
         backgroundColor: const Color(0xFFFF5722),
         body: SafeArea(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SvgPicture.asset("images/logo.svg"),
-                InputField(
-                  label: "Email:",
-                  onChanged: (value)=>{
-                    _email = value
-                  },
-                  textStyle: defaultTextStyle,
-                ),
-                InputField(
-                  label: "Password:",
-                  onChanged: (value)=>{
-                    _password = value
-                  },
-                  textStyle: defaultTextStyle,
-                ),
-               
-              ]),
+          child: Container(
+            margin: const EdgeInsets.all(5.0),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SvgPicture.asset(
+                    "images/logo.svg",
+                  ),
+                  InputField(
+                    label: "Email:",
+                    onChanged: (value)=>{
+                      _email = value
+                    },
+                    textStyle: defaultTextStyle,
+                  ),
+                  InputField(
+                    label: "Password:",
+                    onChanged: (value)=>{
+                      _password = value
+                    },
+                    textStyle: defaultTextStyle,
+                  ),
+                 
+                ]),
+          ),
         ));
   }
 }
