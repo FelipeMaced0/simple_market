@@ -7,26 +7,35 @@ class CircularImage extends StatelessWidget {
       this.xAxis = 100.0,
       this.yAxis = 100.0,
       this.shadowRadius = 10.0,
-      this.borderRadius = 100.0})
+      this.roundness = 100.0,
+      this.padding,
+      this.margin,
+      this.color = const Color(0xFFFFFFFF)
+      })
       : super(key: key);
 
   final String name;
   final double xAxis;
   final double yAxis;
   final double shadowRadius;
-  final double borderRadius;
+  final double roundness;
+  final EdgeInsets? margin;
+  final EdgeInsets? padding;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: xAxis,
       height: yAxis,
+      margin: margin,
+      padding: padding,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(borderRadius),
+        borderRadius: BorderRadius.circular(roundness),
         image: DecorationImage(image: AssetImage(name), fit: BoxFit.fill),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFFF9675),
+            color: color,
             offset: Offset.zero,
             spreadRadius: shadowRadius,
           ),
