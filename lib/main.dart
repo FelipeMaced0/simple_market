@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_market/screens/home.dart';
 import 'package:simple_market/screens/login.dart';
 
 void main() {
@@ -12,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: "/",
-      routes:  {
-        "/" : (context) => const Login(),
+      routes: {
+        "/": (context) => const Login(),
+        "/Home": (context) => Home(),
       },
     );
   }

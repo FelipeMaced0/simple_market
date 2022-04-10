@@ -41,11 +41,8 @@ class _Login extends State<Login> {
                     textStyle: defaultTextStyle,
                   ),
                   ElevatedButton(
-                    onPressed: () => {
-
-                    },
-                    child: const Text("Entrar")
-                  ),
+                      onPressed: () => {Navigator.pushNamed(context, "/Home")},
+                      child: const Text("Entrar")),
                   Expanded(
                     child: Column(children: [
                       Container(
@@ -61,7 +58,6 @@ class _Login extends State<Login> {
                               yAxis: 170.0,
                               margin: EdgeInsets.all(20),
                               padding: EdgeInsets.symmetric(vertical: 30),
-                              
                             ),
                           ],
                         ),
@@ -71,7 +67,6 @@ class _Login extends State<Login> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: const [
-                            
                             CircularImage(
                               name:
                                   "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
