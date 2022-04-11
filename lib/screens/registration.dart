@@ -13,7 +13,7 @@ class _RegistrationState extends State<Registration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SafeArea(
         child: Column(
           children: [
             Logo(
@@ -30,9 +30,15 @@ class _RegistrationState extends State<Registration> {
               label: "Endereço:",
             ),
             Row(
-              children: [
-                InputField(label: "Cep:"),
-                InputField(label: "Número:"),
+              children: const [
+                InputField(
+                  label: "Cep:",
+                  width: 150,
+                ),
+                InputField(
+                  label: "Número:",
+                  width: 150,
+                ),
               ],
             ),
           ],
