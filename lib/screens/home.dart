@@ -3,7 +3,7 @@ import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/widgets/card_img.dart';
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
@@ -33,7 +33,10 @@ class _HomeState extends State<Home> {
                   width: 140,
                   height: 100,
                   quarterTurns: 0,
-                  child: SizedBox(width: 140, height: 30,),
+                  child: SizedBox(
+                    width: 140,
+                    height: 30,
+                  ),
                 ),
               ],
             ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_market/screens/home.dart';
 import 'package:simple_market/screens/login.dart';
+import 'package:simple_market/screens/registration.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/Home",
       routes: {
         "/": (context) => const Login(),
-        "/Home": (context) => Home(),
+        "/Home": (context) => const Home(),
+        "/Registration": (context) => const Registration()
       },
     );
   }
