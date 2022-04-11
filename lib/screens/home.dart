@@ -5,7 +5,7 @@ import 'package:simple_market/widgets/card_img.dart';
 const double padding_card = 30;
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
@@ -86,6 +86,7 @@ class _HomeState extends State<Home> {
                       ],
                     )
                   ],
+
                 ),
               )
             ],
