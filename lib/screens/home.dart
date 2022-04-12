@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/widgets/card_img.dart';
+import 'package:simple_market/widgets/footer_bar.dart';
 
 const double padding_card = 30;
 
@@ -15,6 +16,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: FooterBar(),
       body: Center(
         child: Container(
           margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
