@@ -60,9 +60,9 @@ class _HomeState extends State<Home> {
       ),
       body: Center(
         child: Container(
-          margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
+          margin: const EdgeInsets.fromLTRB(20, 60, 20, 0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Olá User!",
@@ -74,62 +74,49 @@ class _HomeState extends State<Home> {
                 style: defaultTextStyle.copyWith(
                     fontSize: 16, color: const Color(0xFFFF9675)),
               ),
-              Container(
-                margin: const EdgeInsets.only(top: 30),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        CardImg(
-                          width: 140,
-                          height: 100,
-                          quarterTurns: 0,
-                          margin: EdgeInsets.only(bottom: padding_card),
-                          child: SizedBox(
-                            width: 140,
-                            height: 30,
-                          ),
-                        ),
-                        CardImg(
-                          width: 140,
-                          height: 100,
-                          quarterTurns: 0,
-                          margin: EdgeInsets.only(bottom: padding_card),
-                          child: SizedBox(
-                            width: 140,
-                            height: 30,
-                          ),
-                        ),
-                      ],
+              GridView.count(
+                crossAxisCount: 2,
+                shrinkWrap: true,
+                mainAxisSpacing: 25,
+                crossAxisSpacing: 20,
+                children: const [
+                  CardImg(
+                    width: 140,
+                    height: 100,
+                    quarterTurns: 0,
+                    child: SizedBox(
+                      width: 140,
+                      height: 30,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        CardImg(
-                          width: 140,
-                          height: 100,
-                          quarterTurns: 0,
-                          margin: EdgeInsets.only(bottom: padding_card),
-                          child: SizedBox(
-                            width: 140,
-                            height: 30,
-                          ),
-                        ),
-                        CardImg(
-                          width: 140,
-                          height: 100,
-                          quarterTurns: 0,
-                          margin: EdgeInsets.only(bottom: padding_card),
-                          child: SizedBox(
-                            width: 140,
-                            height: 30,
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+                  ),
+                  CardImg(
+                    width: 140,
+                    height: 100,
+                    quarterTurns: 0,
+                    child: SizedBox(
+                      width: 140,
+                      height: 30,
+                    ),
+                  ),
+                  CardImg(
+                    width: 140,
+                    height: 100,
+                    quarterTurns: 0,
+                    child: SizedBox(
+                      width: 140,
+                      height: 30,
+                    ),
+                  ),
+                  CardImg(
+                    width: 140,
+                    height: 100,
+                    quarterTurns: 0,
+                    child: SizedBox(
+                      width: 140,
+                      height: 30,
+                    ),
+                  )
+                ],
               )
             ],
           ),
