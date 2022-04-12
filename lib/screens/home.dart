@@ -16,26 +16,45 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const FooterBar(
-        margin: EdgeInsets.only(top: 10),
-        padding: EdgeInsets.only(top: 5),
+      bottomNavigationBar:  FooterBar(
+        margin: const EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.only(top: 5),
         children: [
           IconFooter(
             icon: Icons.home_filled,
+            iconSize: 20,
+            iconColor: const Color(0xFFFFFFFF),
             text: "Início",
-            iconSize: 20,
+            textStyle: defaultTextStyle.copyWith(
+              fontSize: 8,
+            ),
           ),
           IconFooter(
-            icon: Icons.home_filled,
+            icon: Icons.format_list_numbered,
             iconSize: 20,
+            iconColor: const Color(0xFFFFFFFF),
+            text: "Minha Lista",
+            textStyle: defaultTextStyle.copyWith(
+              fontSize: 8,
+            ),
           ),
           IconFooter(
-            icon: Icons.home_filled,
+            icon: Icons.store_mall_directory_rounded,
             iconSize: 20,
+            iconColor: const Color(0xFFFFFFFF),
+            text: "Buscar",
+            textStyle: defaultTextStyle.copyWith(
+              fontSize: 8,
+            ),
           ),
           IconFooter(
-            icon: Icons.home_filled,
+            icon: Icons.account_circle_sharp,
             iconSize: 20,
+            iconColor: const Color(0xFFFFFFFF),
+            text: "Minha Conta",
+            textStyle: defaultTextStyle.copyWith(
+              fontSize: 8,
+            ),
           ),
         ],
       ),
