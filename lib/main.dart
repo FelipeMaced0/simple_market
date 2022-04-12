@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_market/screens/home.dart';
 import 'package:simple_market/screens/login.dart';
 import 'package:simple_market/screens/registration.dart';
+import 'package:simple_market/screens/general.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/Registration",
+      initialRoute: "/General",
       routes: {
         "/": (context) => const Login(),
         "/Home": (context) => const Home(),
-        "/Registration": (context) => const Registration()
+        "/Registration": (context) => const Registration(),
+        "/General": (context) => const General()
       },
     );
   }
