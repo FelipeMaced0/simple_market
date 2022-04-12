@@ -16,7 +16,29 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: FooterBar(),
+      bottomNavigationBar: const FooterBar(
+        margin: EdgeInsets.only(top: 10),
+        padding: EdgeInsets.only(top: 5),
+        children: [
+          IconFooter(
+            icon: Icons.home_filled,
+            text: "Início",
+            iconSize: 20,
+          ),
+          IconFooter(
+            icon: Icons.home_filled,
+            iconSize: 20,
+          ),
+          IconFooter(
+            icon: Icons.home_filled,
+            iconSize: 20,
+          ),
+          IconFooter(
+            icon: Icons.home_filled,
+            iconSize: 20,
+          ),
+        ],
+      ),
       body: Center(
         child: Container(
           margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
@@ -88,7 +110,6 @@ class _HomeState extends State<Home> {
                       ],
                     )
                   ],
-
                 ),
               )
             ],
