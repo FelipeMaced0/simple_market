@@ -40,9 +40,53 @@ class _Login extends State<Login> {
                     onChanged: (value) => {_password = value},
                     textStyle: defaultTextStyle,
                   ),
-                  ElevatedButton(
-                      onPressed: () => {Navigator.pushNamed(context, "/Home")},
-                      child: const Text("Entrar")),
+                  TextButton(
+                      style: TextButton.styleFrom(
+                        minimumSize: const Size(140, 50),
+                        backgroundColor: const Color(0xFF83E61F),
+                      ),
+                      onPressed: () => {
+                        Navigator.pushNamed(context, "/Home")
+                      },
+                      child: const Text(
+                        "Entrar",
+                        style: defaultTextStyle,
+                      ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children:  [
+                        InkWell(
+                          child:  Text(
+                            "Registra-se",
+                            style: defaultTextStyle.copyWith(
+                              color: const Color(0xFF83E61F),
+                              fontSize: 14,
+                            ),
+                          ),
+                          onTap: () => Navigator.pushNamed(context, "/Registration"),
+                        ),
+                        Text(
+                          ", ou entrar como ",
+                          style: defaultTextStyle.copyWith(
+                            fontSize: 14,
+                          ),
+                        ),
+                        InkWell(
+                          child:  Text(
+                            "convidado!",
+                            style: defaultTextStyle.copyWith(
+                              color: const Color(0xFF83E61F),
+                              fontSize: 14,
+                            ),
+                          ),
+                          onTap: () => Navigator.pushNamed(context, "/Home"),
+                        ),
+                      ],
+                    ),
+                  ),
                   Expanded(
                     child: Column(children: [
                       Container(

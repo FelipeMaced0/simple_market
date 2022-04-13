@@ -47,7 +47,8 @@ class IconFooter extends StatefulWidget {
       this.text = "",
       this.textStyle,
       this.width = 50,
-      this.height = 50})
+      this.height = 50,
+      this.onTap})
       : super(key: key);
 
   final IconData? icon;
@@ -57,6 +58,7 @@ class IconFooter extends StatefulWidget {
   final TextStyle? textStyle;
   final double width;
   final double height;
+  final Function()? onTap;
 
   @override
   State<IconFooter> createState() => _IconFooterState();
@@ -72,22 +74,26 @@ class _IconFooterState extends State<IconFooter> {
     final TextStyle? _textStyle = widget.textStyle;
     final double _width = widget.width;
     final double _height = widget.height;
+    final Function()? _onTap = widget.onTap; 
 
-    return SizedBox(
-      width: _width,
-      height: _height,
-      child: Column(
-        children: [
-          Icon(
-            _icon,
-            size: _iconSize,
-            color: _iconColor,
-          ),
-          Text(
-            _text,
-            style: _textStyle,
-          ),
-        ],
+    return InkWell(
+      onTap: _onTap,
+      child: SizedBox(
+        width: _width,
+        height: _height,
+        child: Column(
+          children: [
+            Icon(
+              _icon,
+              size: _iconSize,
+              color: _iconColor,
+            ),
+            Text(
+              _text,
+              style: _textStyle,
+            ),
+          ],
+        ),
       ),
     );
   }

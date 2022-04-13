@@ -5,14 +5,14 @@ import 'package:simple_market/widgets/footer_bar.dart';
 
 const double padding_card = 30;
 
-class General extends StatefulWidget {
-  const General({Key? key}) : super(key: key);
+class Drink extends StatefulWidget {
+  const Drink({Key? key}) : super(key: key);
 
   @override
-  State<General> createState() => _GeneralState();
+  State<Drink> createState() => _DrinkState();
 }
 
-class _GeneralState extends State<General> {
+class _DrinkState extends State<Drink> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
