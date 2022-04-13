@@ -4,6 +4,7 @@ import 'package:simple_market/screens/home.dart';
 import 'package:simple_market/screens/login.dart';
 import 'package:simple_market/screens/registration.dart';
 import 'package:simple_market/screens/general.dart';
+import 'package:simple_market/screens/search.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         "/Home": (context) => const Home(),
         "/Registration": (context) => const Registration(),
         "/General": (context) => const General(),
-        "/Drink": (context) => const Drink()
+        "/Drink": (context) => const Drink(),
+        "/Search": (context) => const Search()
       },
     );
   }

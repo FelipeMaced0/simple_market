@@ -74,7 +74,9 @@ class _CardImgState extends State<CardImg> {
             elevation: 2.0,
             child: Column(
               children: [
-                Expanded(
+                SizedBox(
+                  height: _height,
+                  width: _width,
                   child: RotatedBox(
                     quarterTurns: -1 * _quarterTurns,
                     child: Container(
@@ -93,7 +95,12 @@ class _CardImgState extends State<CardImg> {
                     ),
                   ),
                 ),
-                _child
+                Expanded(
+                  child: RotatedBox(
+                    quarterTurns: -1 * _quarterTurns,
+                    child: _child,
+                  ),
+                ),
               ],
             ),
           ),
