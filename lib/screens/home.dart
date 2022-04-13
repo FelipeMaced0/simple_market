@@ -28,6 +28,12 @@ class _HomeState extends State<Home> {
             textStyle: defaultTextStyle.copyWith(
               fontSize: 8,
             ),
+            onTap: (){
+              if(ModalRoute.of(context)?.settings.name != "/Home"){
+                Navigator.pushNamed(context, "/Home");
+              } 
+              
+            },
           ),
           IconFooter(
             icon: Icons.format_list_numbered,
@@ -37,6 +43,9 @@ class _HomeState extends State<Home> {
             textStyle: defaultTextStyle.copyWith(
               fontSize: 8,
             ),
+            onTap: (){
+              Navigator.pushNamed(context, "/MyList");
+            },
           ),
           IconFooter(
             icon: Icons.store_mall_directory_rounded,
@@ -46,6 +55,9 @@ class _HomeState extends State<Home> {
             textStyle: defaultTextStyle.copyWith(
               fontSize: 8,
             ),
+            onTap: (){
+              Navigator.pushNamed(context, "/Search");
+            },
           ),
           IconFooter(
             icon: Icons.account_circle_sharp,
@@ -55,6 +67,9 @@ class _HomeState extends State<Home> {
             textStyle: defaultTextStyle.copyWith(
               fontSize: 8,
             ),
+            onTap: (){
+              Navigator.pushNamed(context, "/MyAcount4");
+            },
           ),
         ],
       ),
