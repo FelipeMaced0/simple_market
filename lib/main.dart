@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_market/screens/drink.dart';
 import 'package:simple_market/screens/home.dart';
 import 'package:simple_market/screens/login.dart';
 import 'package:simple_market/screens/registration.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         "/": (context) => const Login(),
         "/Home": (context) => const Home(),
         "/Registration": (context) => const Registration(),
-        "/General": (context) => const General()
+        "/General": (context) => const General(),
+        "/Drink": (context) => const Drink()
       },
     );
   }

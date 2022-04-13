@@ -23,14 +23,14 @@ const BorderRadius top = BorderRadius.only(
 class CardImg extends StatefulWidget {
   const CardImg(
       {Key? key,
+      required this.image,
       this.quarterTurns = 0,
       this.width = 140,
       this.height = 100,
       this.margin,
       this.padding,
       required this.child,
-      this.onTap
-    })
+      this.onTap})
       : super(key: key);
 
   final int quarterTurns;
@@ -40,6 +40,7 @@ class CardImg extends StatefulWidget {
   final EdgeInsets? margin;
   final EdgeInsets? padding;
   final Function()? onTap;
+  final ImageProvider<Object> image;
 
   @override
   State<CardImg> createState() => _CardImgState();
@@ -48,6 +49,7 @@ class CardImg extends StatefulWidget {
 class _CardImgState extends State<CardImg> {
   @override
   Widget build(BuildContext context) {
+    final ImageProvider<Object> _image = widget.image;
     final int _quarterTurns = widget.quarterTurns;
     final double _width = widget.width;
     final double _height = widget.height;
@@ -59,6 +61,8 @@ class _CardImgState extends State<CardImg> {
     return InkWell(
       onTap: _onTap,
       child: Container(
+        width: _width,
+        height: _height,
         margin: _margin,
         padding: _padding,
         child: RotatedBox(
@@ -70,19 +74,21 @@ class _CardImgState extends State<CardImg> {
             elevation: 2.0,
             child: Column(
               children: [
-                SizedBox(
-                  width: _width,
-                  height: _height,
+                Expanded(
                   child: RotatedBox(
                     quarterTurns: -1 * _quarterTurns,
                     child: Container(
                       constraints: const BoxConstraints.expand(),
                       decoration: BoxDecoration(
-                        image: const DecorationImage(
-                          image: AssetImage("images/nrd-D6Tu_L3chLE-unsplash.jpg"),
+                        image: DecorationImage(
+                          image: _image,
                           fit: BoxFit.cover,
                         ),
-                        borderRadius: (_quarterTurns % 4 == 0 ? bottom : (_quarterTurns % 4 == 1 ? left : (_quarterTurns % 4 == 2 ? top : right))),
+                        borderRadius: (_quarterTurns % 4 == 0
+                            ? bottom
+                            : (_quarterTurns % 4 == 1
+                                ? left
+                                : (_quarterTurns % 4 == 2 ? top : right))),
                       ),
                     ),
                   ),

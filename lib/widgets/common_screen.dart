@@ -28,9 +28,7 @@ class _CommonScreenState extends State<CommonScreen> {
               fontSize: 8,
             ),
             onTap: () {
-              if (ModalRoute.of(context)?.settings.name != "/CommonScreen") {
-                Navigator.pushNamed(context, "/CommonScreen");
-              }
+              Navigator.popUntil(context, ModalRoute.withName("/Home"));
             },
           ),
           IconFooter(
@@ -42,7 +40,9 @@ class _CommonScreenState extends State<CommonScreen> {
               fontSize: 8,
             ),
             onTap: () {
-              Navigator.pushNamed(context, "/MyList");
+              if (ModalRoute.of(context)?.settings.name != "/MyList") {
+                Navigator.pushNamed(context, "/MyList");
+              }
             },
           ),
           IconFooter(
@@ -54,7 +54,9 @@ class _CommonScreenState extends State<CommonScreen> {
               fontSize: 8,
             ),
             onTap: () {
-              Navigator.pushNamed(context, "/Search");
+              if (ModalRoute.of(context)?.settings.name != "/Search") {
+                Navigator.pushNamed(context, "/Search");
+              }
             },
           ),
           IconFooter(
@@ -66,7 +68,9 @@ class _CommonScreenState extends State<CommonScreen> {
               fontSize: 8,
             ),
             onTap: () {
-              Navigator.pushNamed(context, "/MyAcount4");
+              if (ModalRoute.of(context)?.settings.name != "/MyAccount") {
+                Navigator.pushNamed(context, "/MyAccount");
+              }
             },
           ),
         ],
@@ -74,7 +78,9 @@ class _CommonScreenState extends State<CommonScreen> {
       body: Center(
         child: Container(
           margin: const EdgeInsets.fromLTRB(20, 60, 20, 0),
-          child: Column(children: _children),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: _children),
         ),
       ),
     );

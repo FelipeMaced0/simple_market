@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/widgets/card_img.dart';
-import 'package:simple_market/widgets/footer_bar.dart';
 import 'package:simple_market/widgets/common_screen.dart';
-
-const double padding_card = 30;
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -38,6 +35,7 @@ class _HomeState extends State<Home> {
               width: 140,
               height: 100,
               quarterTurns: 0,
+              image: const AssetImage("images/nrd-D6Tu_L3chLE-unsplash.jpg"),
               child: Text(
                 "Geral",
                 style: defaultTextStyle.copyWith(
@@ -52,6 +50,22 @@ class _HomeState extends State<Home> {
               width: 140,
               height: 100,
               quarterTurns: 0,
+              image: const AssetImage("images/nrd-D6Tu_L3chLE-unsplash.jpg"),
+              child: Text(
+                "Bebidas",
+                style: defaultTextStyle.copyWith(
+                  color: const Color(0xFFFF5722),
+                ),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, "/Drink");
+              },
+            ),
+            CardImg(
+              width: 140,
+              height: 100,
+              quarterTurns: 0,
+              image: const AssetImage("images/nrd-D6Tu_L3chLE-unsplash.jpg"),
               child: Text(
                 "Geral",
                 style: defaultTextStyle.copyWith(
@@ -63,17 +77,7 @@ class _HomeState extends State<Home> {
               width: 140,
               height: 100,
               quarterTurns: 0,
-              child: Text(
-                "Geral",
-                style: defaultTextStyle.copyWith(
-                  color: const Color(0xFFFF5722),
-                ),
-              ),
-            ),
-            CardImg(
-              width: 140,
-              height: 100,
-              quarterTurns: 0,
+              image: const AssetImage("images/nrd-D6Tu_L3chLE-unsplash.jpg"),
               child: Text(
                 "Geral",
                 style: defaultTextStyle.copyWith(
