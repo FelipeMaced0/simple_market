@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/screens/drink.dart';
 import 'package:simple_market/screens/home.dart';
 import 'package:simple_market/screens/login.dart';
 import 'package:simple_market/screens/registration.dart';
 import 'package:simple_market/screens/general.dart';
 import 'package:simple_market/screens/search.dart';
+import 'package:simple_market/constants/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +19,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: "/",
+      theme: ThemeData(
+        textTheme: const TextTheme().apply(
+          fontFamily: "FredokaOne",
+        ),
+      ),
       routes: {
         "/": (context) => const Login(),
         "/Home": (context) => const Home(),

@@ -5,3 +5,4 @@ const Color kLightOrange = Color(0xFFFF9675);
 const Color kBaseGreen = Color(0xFF83E61F);
 const Color kBaseGrey = Color(0xFFD2CECC);
 const Color kLightGrey = Color(0xFFF5F4F4);
+const Color kWhite = Color(0xFFFFFFFF);

@@ -53,7 +53,7 @@ class _InputFieldState extends State<InputField> {
             margin: const EdgeInsets.only(bottom: 5.0),
             child: Text(
               _label,
-              style: _textStyle,
+              //style: _textStyle,
             ),
           ),
           SizedBox(
