@@ -3,9 +3,13 @@ import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/widgets/footer_bar.dart';
 
 class CommonScreen extends StatefulWidget {
-  const CommonScreen({Key? key, required this.children}) : super(key: key);
+  const CommonScreen(
+      {Key? key,
+      required this.children,
+      this.crossAxisAlignment = CrossAxisAlignment.start})
+      : super(key: key);
   final List<Widget> children;
-
+  final CrossAxisAlignment crossAxisAlignment;
   @override
   State<CommonScreen> createState() => _CommonScreenState();
 }
@@ -14,6 +18,8 @@ class _CommonScreenState extends State<CommonScreen> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> _children = widget.children;
+    final CrossAxisAlignment _crossAxisAlignment = widget.crossAxisAlignment;
+
     return Scaffold(
       bottomNavigationBar: FooterBar(
         margin: const EdgeInsets.only(top: 10),
@@ -79,8 +85,9 @@ class _CommonScreenState extends State<CommonScreen> {
         child: Container(
           margin: const EdgeInsets.fromLTRB(20, 60, 20, 0),
           child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: _children),
+            crossAxisAlignment: _crossAxisAlignment,
+            children: _children,
+          ),
         ),
       ),
     );
