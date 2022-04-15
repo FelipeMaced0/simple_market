@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/screens/drink.dart';
 import 'package:simple_market/screens/home.dart';
 import 'package:simple_market/screens/login.dart';
@@ -21,15 +20,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: "/",
       theme: ThemeData(
-        fontFamily: "FredokaOne",
-        inputDecorationTheme: InputDecorationTheme(
-          suffixIconColor: kBaseOrange,
-          focusColor: kBaseOrange,
-          filled: true,
-          focusedBorder: OutlineInputBorder(
+        //fontFamily: "FredokaOne",
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            fontFamily: "FredokaOne",
+          )
+        ),
+        inputDecorationTheme:  InputDecorationTheme(
+
+          focusedBorder:  OutlineInputBorder(
+            borderSide: const BorderSide(
+              color: kLightOrange,
+              width: 2,
+            ),
             borderRadius: BorderRadius.circular(10),
           ),
-        ),
+          iconColor: kLightOrange,
+
+        )
       ),
       routes: {
         "/": (context) => const Login(),
