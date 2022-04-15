@@ -8,8 +8,11 @@ class InputField extends StatefulWidget {
       this.textStyle,
       this.width = 300.0,
       this.height = 40.0,
-      this.margin,
-      this.padding = const EdgeInsets.all(20.0)})
+      this.margin = const EdgeInsets.all(20.0),
+      this.padding,
+      this.hintText = "",
+      this.hintStyle,
+      this.icon})
       : super(key: key);
 
   final String label;
@@ -19,7 +22,9 @@ class InputField extends StatefulWidget {
   final double? height;
   final EdgeInsets? margin;
   final EdgeInsets? padding;
-
+  final String hintText;
+  final TextStyle? hintStyle;
+  final Widget? icon;
   @override
   State<InputField> createState() => _InputFieldState();
 }
@@ -34,6 +39,9 @@ class _InputFieldState extends State<InputField> {
     final double? _height = widget.height;
     final EdgeInsets? _margin = widget.margin;
     final EdgeInsets? _padding = widget.padding;
+    final String _hintText = widget.hintText;
+    final TextStyle? _hintStyle = widget.hintStyle;
+    final Widget? _icon = widget.icon;
 
     return Container(
       margin: _margin,
@@ -42,22 +50,25 @@ class _InputFieldState extends State<InputField> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.only(bottom: 5.0),
+            margin: const EdgeInsets.only(bottom: 5.0),
             child: Text(
               _label,
-              style: _textStyle,
+              //style: _textStyle,
             ),
           ),
           SizedBox(
             width: _width,
             height: _height,
             child: TextField(
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 filled: true,
-                fillColor: Color(0xFFFFFFFF),
-                border: OutlineInputBorder(
+                fillColor: const Color(0xFFFFFFFF),
+                border: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(5.0)),
                 ),
+                hintText: _hintText,
+                hintStyle: _hintStyle,
+                suffixIcon: _icon,
               ),
               onChanged: _onChanged,
             ),
