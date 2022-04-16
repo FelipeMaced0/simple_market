@@ -18,11 +18,11 @@ class _RegistrationState extends State<Registration> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(
-          children: [
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 10),
-              child: Column(
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 10),
+          child: ListView(
+            children: [
+              Column(
                 //crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Logo(
@@ -96,8 +96,8 @@ class _RegistrationState extends State<Registration> {
                   ),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
