@@ -23,6 +23,14 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme().apply(
           fontFamily: "FredokaOne",
         ),
+        inputDecorationTheme: InputDecorationTheme(
+          suffixIconColor: kBaseOrange,
+          focusColor: kBaseOrange,
+          filled: true,
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
       ),
       routes: {
         "/": (context) => const Login(),
