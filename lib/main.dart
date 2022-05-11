@@ -21,9 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: "/",
       theme: ThemeData(
-        textTheme: const TextTheme().apply(
-          fontFamily: "FredokaOne",
-        ),
+        fontFamily: "FredokaOne",
         inputDecorationTheme: InputDecorationTheme(
           suffixIconColor: kBaseOrange,
           focusColor: kBaseOrange,

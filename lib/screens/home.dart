@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_market/constants/text_constants.dart';
 import 'package:simple_market/widgets/card_img.dart';
 import 'package:simple_market/widgets/common_screen.dart';
+import 'package:simple_market/widgets/logo.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -15,6 +16,13 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return CommonScreen(
       children: [
+        const Flexible(
+          flex: 1,
+          child: Logo(
+            assetName: "images/logo.svg",
+            imageColor: Color(0xFFFF9675),
+          ),
+        ),
         Text(
           "Olá User!",
           style: defaultTextStyle.copyWith(
