@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_market/constants/colors.dart';
 import 'package:simple_market/widgets/common_screen.dart';
 import 'package:simple_market/widgets/logo.dart';
+import 'package:simple_market/screens/add_product_alert_dialogo.dart';
 
 class MyList extends StatefulWidget {
   const MyList({Key? key}) : super(key: key);
@@ -142,6 +143,10 @@ class _MyListState extends State<MyList> {
                   shape: const CircleBorder(),
                   onPressed: () {
                     setState(() {
+                      showDialog(
+                        context: context,
+                        builder: (context) => const AddProductAlert(),
+                      );
                       _totalItens += 1;
                       addProduct();
                     });
