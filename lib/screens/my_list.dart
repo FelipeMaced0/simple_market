@@ -13,44 +13,10 @@ class MyList extends StatefulWidget {
 class _MyListState extends State<MyList> {
   int _totalItens = 0;
   double _totalValue = 10.53;
-  List<Widget> _products = [];
+  List<String> _products = [];
 
   void addProduct() {
-    _products = [
-      ..._products,
-      Card(
-        key: UniqueKey(),
-        child: Container(
-          padding: const EdgeInsets.all(10),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(right: 20),
-                    child: const Icon(Icons.abc),
-                  ),
-                  const Text("Peixe"),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  InkWell(
-                    child: const Icon(
-                      Icons.delete_outline_rounded,
-                    ),
-                    onTap: () {},
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
-      )
-    ];
+    _products = [..._products, "Teste ${_totalItens + 1}"];
   }
 
   @override
@@ -118,9 +84,51 @@ class _MyListState extends State<MyList> {
         ),
         Flexible(
           flex: 4,
-          child: ListView(
+          child: ListView.builder(
             shrinkWrap: true,
-            children: _products,
+            itemCount: _products.length,
+            itemBuilder: (context, index) {
+              final product = _products[index];
+              return Dismissible(
+                key: Key(product),
+                child: Card(
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.only(right: 20),
+                              child: const Icon(Icons.abc),
+                            ),
+                            const Text("Peixe"),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            InkWell(
+                              child: const Icon(
+                                Icons.delete_outline_rounded,
+                              ),
+                              onTap: () {
+                                setState(() {
+                                  _products.removeAt(index);
+                                  _totalItens -= 1;
+                                });
+                              },
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            },
           ),
         ),
         Flexible(
