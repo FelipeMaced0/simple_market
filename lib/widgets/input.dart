@@ -25,6 +25,7 @@ class InputField extends StatefulWidget {
   final String hintText;
   final TextStyle? hintStyle;
   final Widget? icon;
+  
   @override
   State<InputField> createState() => _InputFieldState();
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_market/constants/colors.dart';
 
 import 'package:simple_market/widgets/input.dart';
 import 'package:simple_market/constants/text_constants.dart';
@@ -29,24 +30,28 @@ class _Login extends State<Login> {
               children: <Widget>[
                 const Logo(
                   assetName: "images/logo.svg",
-                  imageColor: Color(0xFFFFFFFF),
+                  imageColor: kWhite,
                 ),
                 InputField(
                   label: "Email:",
                   onChanged: (value) => {_email = value},
-                  textStyle: defaultTextStyle,
+                  textStyle: defaultTextStyle.copyWith(
+                    color: kWhite,
+                  ),
                 ),
                 InputField(
                   label: "Password:",
                   onChanged: (value) => {_password = value},
-                  textStyle: defaultTextStyle,
+                  textStyle: defaultTextStyle.copyWith(
+                    color: kWhite,
+                  ),
                 ),
                 TextButton(
                   style: TextButton.styleFrom(
                     minimumSize: const Size(140, 50),
-                    backgroundColor: const Color(0xFF83E61F),
+                    backgroundColor: kBaseGreen,
                   ),
-                  onPressed: () => {Navigator.pushNamed(context, "/Home")},
+                  onPressed: () => Navigator.pushNamed(context, "/Home"),
                   child: const Text(
                     "Entrar",
                     style: defaultTextStyle,
@@ -61,7 +66,7 @@ class _Login extends State<Login> {
                         child: Text(
                           "Registra-se",
                           style: defaultTextStyle.copyWith(
-                            color: const Color(0xFF83E61F),
+                            color: kBaseGreen,
                             fontSize: 14,
                           ),
                         ),
@@ -78,7 +83,7 @@ class _Login extends State<Login> {
                         child: Text(
                           "convidado!",
                           style: defaultTextStyle.copyWith(
-                            color: const Color(0xFF83E61F),
+                            color: kBaseGreen,
                             fontSize: 14,
                           ),
                         ),
@@ -97,7 +102,7 @@ class _Login extends State<Login> {
                           CircularImage(
                             name:
                                 "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
-                            color: Color(0xFFFF9675),
+                            color: kLightOrange,
                             xAxis: 170.0,
                             yAxis: 170.0,
                             margin: EdgeInsets.all(20),
@@ -114,7 +119,7 @@ class _Login extends State<Login> {
                           CircularImage(
                             name:
                                 "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
-                            color: Color(0xFFFF9675),
+                            color: kLightOrange,
                             xAxis: 90.0,
                             yAxis: 90.0,
                             margin: EdgeInsets.only(right: 30),
@@ -122,7 +127,7 @@ class _Login extends State<Login> {
                           CircularImage(
                             name:
                                 "images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg",
-                            color: Color(0xFFFF9675),
+                            color: kLightOrange,
                             xAxis: 40.0,
                             yAxis: 40.0,
                           ),
